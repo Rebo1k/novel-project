@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>hal28-bab1.html</title>
+  <style>
+     body {  
+      overflow-y: auto;  
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }  
+    * {
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    :root {
+      --border-black: 1px solid black;
+      --border-white: 2px solid white;
+      --border-radius-pt1: 5px;
+      --text-align: center;
+      --font-weight: bold;
+    }
+    header {
+      background-color: #333;
+      text-align: center;
+    }
+    h1 {
+      color: white;
+      transition: background 0.4s ease, background-size 0.4s ease, color 0.4s ease, -webkit-background-clip 0.4s ease;
+    }
+    h1:hover {
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red, orange, yellow);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowMove 5s linear infinite;
+    }
+    h2 {
+      color: white;
+      text-shadow: 0 0 1px black;
+      transition: text-shadow 0.4s ease;
+    }
+    h2:hover {
+      text-shadow: 0 0 5px black;
+    }
+    h6 {
+      width: 40px;
+      background-color: #222;
+      text-align: center;
+      margin: 0 auto;
+      border: 1px solid black;
+      color: white;
+      border-radius: var(--border-radius-pt1);
+      transition: box-shadow 0.4s ease;
+    }
+    h6:hover {
+      box-shadow: 0 0 5px black;
+    }
+    fieldset {
+      background-color: #444;
+      border-radius: var(--border-radius-pt1);
+      border: var(--border-black);
+      transition: all 0.4s ease;
+    }
+    fieldset p,
+    fieldset legend{
+      color: white;
+    }
+    fieldset:hover {
+      box-shadow: 0 0 5px black;
+    }
+    fieldset:hover legend,
+    fieldset:hover p {
+      text-shadow: 0 0 5px black;
+      font-weight: bold;
+      color: white;
+    }
+    legend {
+      font-weight: var(--font-weight);
+      transition: all 0.5s ease;
+    }
+    p {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: all 0.5s ease;
+    }
+    p > b {
+      all: unset;
+      display: inline-block;
+      width: 100%;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red, orange, yellow);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowMove 5s linear infinite;
+    }
+    p:hover {
+      text-shadow: 0 0 5px black;
+      font-weight: bold;
+      color: white;
+    }
+    kondisi {
+      font-weight: bold;
+      transition: all 0.5s ease;
+    }
+    kondisi:hover {
+      color: white;
+      text-shadow: 0 0 5px black;
+    }
+     @keyframes rainbowMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    .chat-novel {
+      width: 300px;
+      height: 450px;
+      border-radius: 12px;
+      background: #e5ddd5;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 10px rgba(0,0,0,.2);
+      margin: 20px auto;
+      font-family: sans-serif;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+    
+    .chat-novel:hover {
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .chat-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #075E54;
+      padding: 10px;
+      color: white;
+      position: relative;
+    }
+
+    .chat-header .pp {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background-image: url('https://files.catbox.moe/qx6llw.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+    .icon-menu {
+      width: 22px;
+      height: 22px;
+      background-image: url('https://files.catbox.moe/bzkk2r.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 10px;
+    }
+
+    .chat-body {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .chat-item {
+      display: flex;
+      flex-direction: column;
+      max-width: 80%;
+    }
+
+    .chat-info {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 3px;
+    }
+
+    .chat-bubble {
+      padding: 8px 12px;
+      border-radius: 12px;
+      word-wrap: break-word;
+      font-size: 14px;
+    }
+
+    .kiri .chat-bubble {
+      background: white;
+      border-top-left-radius: 0;
+    }
+
+    .kanan {
+      align-self: flex-end;
+    }
+
+    .kanan .chat-bubble {
+      background: #dcf8c6;
+      border-top-right-radius: 0;
+    }
+    .pesan-baru-container {
+      display: flex;
+      justify-content: center;
+    }
+    .pesan-baru {
+      width: 50%;
+      border-radius: 10px;
+      text-align: center;
+      background: white;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h6>bab1</h6>
+  <header>
+    <h1>COUSIN LOVE</h1>
+  </header>
+  <h2>Hal28: indomaret, persiapan tour</h2>
+  <div>
+    <kondisi>
+      [Indomaret - lorong Snack]
+    </kondisi>
+    <p>
+      Tour kelulusan tinggal besok pagi. Tiga hari dua malam, nginep di hotel, naik bis bareng teman-teman… tapi entah kenapa fokus pertama kami bukan bawa baju atau alat mandi, tapi stok cemilan.
+    </p>
+    <p>
+      Aku dan Sena masuk Indomaret, dan mata kami langsung ke rak snack seperti orang yang baru gajian. Sena cuma ambil dua bungkus keripik, itu pun yang paling kecil.
+    </p>
+    <p>
+      <b>Vino ↓</b>“Sena, kamu yakin cuma segitu?”
+    </p>
+    <p>
+      <b>Sena ↓</b>“Iya… takut nggak kemakan.”
+    </p>
+    <p>
+      Aku ngeliat keranjangku sendiri. Isinya udah kayak mau buka warung: keripik, wafer, minuman, permen, roti, sampai kuaci rasa jagung bakar yang aku sendiri nggak tahu kenapa aku ambil.
+    </p>
+    <p>
+      <b>Sena ↓</b>“Keranjang kamu rame banget…”
+    </p>
+    <p>
+      <b>Vino ↓</b>“Ini tour tiga hari dua malam. Persiapan harus matang.”
+    </p>
+    <p>
+      Sena cuma nyengir, lalu tiba-tiba dia masukin snack super pedas level 10 ke keranjang.
+    </p>
+    <p>
+      <b>Vino ↓</b>“Sejak kapan kamu jadi ekstrim?”
+    </p>
+    <p>
+      <b>Sena ↓</b>“Biar nggak kedinginan di hotel.”
+    </p>
+    <p>
+      Alasan yang aneh, tapi ya sudahlah.  <br>
+Kami lanjut milih minuman, dan Sena berhenti di depan freezer sambil pegang es teh.
+    </p>
+    <p>
+      <b>Sena ↓</b>“Kalo aku minum ini pas di bis nanti, aku bakal kebelet nggak?”
+    </p>
+    <p>
+      <b>Vino ↓</b>“Tergantung… kamu mau bikin panik satu bis apa nggak.”
+    </p>
+    <p>
+      Dia langsung naruh minumannya lagi. Aku hampir ketawa keras.
+    </p>
+  </div>
+  <p>----</p>
+  <div>
+    <fieldset>
+      <legend>pesan</legend>
+      <p>
+        Terkadang persiapan sederhana bisa lebih seru daripada acaranya. <br>
+Bukan karena snack-nya, tapi karena ada orang yang nemenin kamu milihnya.
+      </p>
+    </fieldset>
+  </div>
+  <p>----</p>
+  <div>
+    <p>
+      Kami keluar dari Indomaret dengan dua kantong plastik penuh. Bukan perlengkapan mandi, bukan baju ganti… tapi jajanan yang kalo diliat guru mungkin langsung bikin diceramahin.
+    </p>
+    <p>
+      <b>Vino ↓</b>“Siap berangkat besok?”
+    </p>
+    <p>
+      <b>Sena ↓</b>“Siap. Asal kamu jangan rebut tempat duduk aku.”
+    </p>
+    Aku cuma senyum sambil ngangkat belanjaan.  
+    <i>Tour kelulusan… kami siap.</i>
+  </div>
+  <p>----</p>
+  <div>
+    <fieldset>
+      <legend>kesimpulan</legend>
+      <p>
+        Perjalanan terasa lebih panjang kalau kamu sendirian.
+Tapi jadi lebih ringan kalau kamu tahu ada yang duduk di sebelahmu.
+      </p>
+    </fieldset>
+  </div>
+</body>
+</html>

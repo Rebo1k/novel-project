@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+     body {  
+      overflow-y: auto;  
+      overflow-x: hidden;
+      max-width: 100%;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }  
+    * {
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    :root {
+      --border-black: 1px solid black;
+      --border-white: 2px solid white;
+      --border-radius-pt1: 5px;
+      --text-align: center;
+      --font-weight: bold;
+    }
+    header {
+      background-color: #333;
+      text-align: center;
+    }
+    h1 {
+      color: white;
+      transition: background 0.4s ease, background-size 0.4s ease, color 0.4s ease, -webkit-background-clip 0.4s ease;
+    }
+    h1:hover {
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red, orange, yellow);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowMove 5s linear infinite;
+    }
+    h2 {
+      color: white;
+      text-shadow: 0 0 1px black;
+      transition: text-shadow 0.4s ease;
+    }
+    h2:hover {
+      text-shadow: 0 0 5px black;
+    }
+    h6 {
+      width: 40px;
+      background-color: #222;
+      text-align: center;
+      margin: 0 auto;
+      border: 1px solid black;
+      color: white;
+      border-radius: var(--border-radius-pt1);
+      transition: box-shadow 0.4s ease;
+    }
+    h6:hover {
+      box-shadow: 0 0 5px black;
+    }
+    fieldset {
+      background-color: #444;
+      border-radius: var(--border-radius-pt1);
+      border: var(--border-black);
+      transition: all 0.4s ease;
+    }
+    fieldset p,
+    fieldset legend{
+      color: white;
+    }
+    fieldset:hover {
+      box-shadow: 0 0 5px black;
+    }
+    fieldset:hover legend,
+    fieldset:hover p {
+      text-shadow: 0 0 5px black;
+      font-weight: bold;
+      color: white;
+    }
+    legend {
+      font-weight: var(--font-weight);
+      transition: all 0.5s ease;
+    }
+    p {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: all 0.5s ease;
+    }
+    p > b {
+      all: unset;
+      display: inline-block;
+      width: 100%;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red, orange, yellow);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowMove 5s linear infinite;
+    }
+    p:hover {
+      text-shadow: 0 0 5px black;
+      font-weight: bold;
+      color: white;
+    }
+    kondisi {
+      font-weight: bold;
+      transition: all 0.5s ease;
+    }
+    kondisi:hover {
+      color: white;
+      text-shadow: 0 0 5px black;
+    }
+     @keyframes rainbowMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+  </style>
+  <title>hal1-bab1.html</title>
+</head>
+<body>
+  <h6>bab 1</h6>
+  <header>
+    <h1>COUSIN LOVE</h1>
+  </header>
+  <h2>hal1 1: Perkenalan</h2>
+  <div>
+    <p>
+      Sore itu langit perlahan berubah warna—dari biru muda jadi jingga keemasan. 
+      Aku duduk di atas gundukan tanah yang kering, menonton teman-temanku masih 
+      asik bertarung layangan. (Aku hanya bisa menghela napas melihat benangku 
+      putus sejak tadi).
+    </p>
+    <p>
+      Layanganku sudah habis. Tiga layangan melayang pergi gara-gara satu orang: 
+      seorang bapak-bapak yang wajahnya terasa familiar. 
+    </p>
+    <p>
+      "Sialan juga, tiga lawan satu masih kalah" (gumamku sambil menendang kerikil).
+      "Apa aku harus berguru segala biar bisa ngalahin bapak itu?"
+    </p>
+  </div>
+
+  <p>----</p>
+
+  <div>
+    <fieldset>
+      <legend>Perkenalan</legend>
+      <p>
+        Oh iya, kenalin. Namaku <b>Alvino Pratama</b>, umur lima belas tahun. 
+        (Remaja tanggung yang katanya suka mikir kritis, walau aku sendiri kadang ragu).  
+        Aku lebih suka menyebut diriku pencari ketenangan, karena di balik ramainya hari, 
+        aku selalu mencari sudut sunyi. 
+    </p>
+    </fieldset>
+  </div>
+
+  <p>----</p>
+
+  <div>
+    <p>
+      Malam harinya, aku duduk di bangku halaman rumah. Angin malam berhembus pelan, 
+      membawa suara daun pisang bergoyang samar. Dari posisiku, langit terlihat penuh bintang. 
+    </p>
+    <p>
+      (Aku menutup mata sejenak, menikmati sunyi yang jarang aku dapatkan). 
+      Tapi kedamaian itu gak bertahan lama—nyamuk mulai datang dari segala arah.
+    </p>
+    <p>
+      Alvino > "Hhh... ternyata gini ya rasanya jadi artis."  
+      Alvino > "Dikerumunin terus, padahal aku cuma duduk doang."  
+    </p>
+    <p>
+      (Aku menepuk-nepuk tangan, gagal mengenai satu pun). 
+      Lucu sih, hidup kadang suka iseng—baru aja nemuin tenang, tiba-tiba gangguannya datang.
+    </p>
+    <p>
+      Tapi mungkin dari situlah ceritaku dimulai. Dari momen kecil yang gak terduga, 
+      sampai akhirnya aku bertemu dia.
+    </p>
+  </div>
+
+  <p>----</p>
+
+  <fieldset>
+    <legend>Pesan</legend>
+    <p>
+      Perkenalan sederhana kadang jadi awal dari cerita besar. 
+      Semua kisah berharga dimulai dari hal kecil yang mungkin tampak sepele.
+    </p>
+  </fieldset>
+</body>
+</html>

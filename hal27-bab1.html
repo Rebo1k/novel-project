@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>hal27-bab1.html</title>
+  <style>
+     body {  
+      overflow-y: auto;  
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }  
+    * {
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    :root {
+      --border-black: 1px solid black;
+      --border-white: 2px solid white;
+      --border-radius-pt1: 5px;
+      --text-align: center;
+      --font-weight: bold;
+    }
+    header {
+      background-color: #333;
+      text-align: center;
+    }
+    h1 {
+      color: white;
+      transition: background 0.4s ease, background-size 0.4s ease, color 0.4s ease, -webkit-background-clip 0.4s ease;
+    }
+    h1:hover {
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red, orange, yellow);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowMove 5s linear infinite;
+    }
+    h2 {
+      color: white;
+      text-shadow: 0 0 1px black;
+      transition: text-shadow 0.4s ease;
+    }
+    h2:hover {
+      text-shadow: 0 0 5px black;
+    }
+    h6 {
+      width: 40px;
+      background-color: #222;
+      text-align: center;
+      margin: 0 auto;
+      border: 1px solid black;
+      color: white;
+      border-radius: var(--border-radius-pt1);
+      transition: box-shadow 0.4s ease;
+    }
+    h6:hover {
+      box-shadow: 0 0 5px black;
+    }
+    fieldset {
+      background-color: #444;
+      border-radius: var(--border-radius-pt1);
+      border: var(--border-black);
+      transition: all 0.4s ease;
+    }
+    fieldset p,
+    fieldset legend{
+      color: white;
+    }
+    fieldset:hover {
+      box-shadow: 0 0 5px black;
+    }
+    fieldset:hover legend,
+    fieldset:hover p {
+      text-shadow: 0 0 5px black;
+      font-weight: bold;
+      color: white;
+    }
+    legend {
+      font-weight: var(--font-weight);
+      transition: all 0.5s ease;
+    }
+    p {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: all 0.5s ease;
+    }
+    p > b {
+      all: unset;
+      display: inline-block;
+      width: 100%;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red, orange, yellow);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowMove 5s linear infinite;
+    }
+    p:hover {
+      text-shadow: 0 0 5px black;
+      font-weight: bold;
+      color: white;
+    }
+    kondisi {
+      font-weight: bold;
+      transition: all 0.5s ease;
+    }
+    kondisi:hover {
+      color: white;
+      text-shadow: 0 0 5px black;
+    }
+     @keyframes rainbowMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    .chat-novel {
+      width: 300px;
+      height: 450px;
+      border-radius: 12px;
+      background: #e5ddd5;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 10px rgba(0,0,0,.2);
+      margin: 20px auto;
+      font-family: sans-serif;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+    
+    .chat-novel:hover {
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .chat-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #075E54;
+      padding: 10px;
+      color: white;
+      position: relative;
+    }
+
+    .chat-header .pp {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background-image: url('https://files.catbox.moe/qx6llw.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+    .icon-menu {
+      width: 22px;
+      height: 22px;
+      background-image: url('https://files.catbox.moe/bzkk2r.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 10px;
+    }
+
+    .chat-body {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .chat-item {
+      display: flex;
+      flex-direction: column;
+      max-width: 80%;
+    }
+
+    .chat-info {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 3px;
+    }
+
+    .chat-bubble {
+      padding: 8px 12px;
+      border-radius: 12px;
+      word-wrap: break-word;
+      font-size: 14px;
+    }
+
+    .kiri .chat-bubble {
+      background: white;
+      border-top-left-radius: 0;
+    }
+
+    .kanan {
+      align-self: flex-end;
+    }
+
+    .kanan .chat-bubble {
+      background: #dcf8c6;
+      border-top-right-radius: 0;
+    }
+    .pesan-baru-container {
+      display: flex;
+      justify-content: center;
+    }
+    .pesan-baru {
+      width: 50%;
+      border-radius: 10px;
+      text-align: center;
+      background: white;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h6>bab1</h6>
+  <header>
+    <h1>COUSIN LOVE</h1>
+  </header>
+  <h2>Hal27: seminggu padat, tapi tetap jalan</h2>
+  <div>
+    <kondisi>
+      [Sekolah – Ruang Kelas 9B Pagi Hari]
+    </kondisi>
+    <p>
+      Minggu PAS dimulai dengan udara kelas yang lebih dingin dari biasanya. Jendela sedikit terbuka, angin membawa bau kapur sisa pelajaran kemarin. Vino duduk di bangku tengah, mengetuk-ngetukkan pulpen ke meja pelan—kebiasaan kecil tiap kali dia lagi nyari fokus. Di depannya, lembar soal terlipat rapi, tinggal menunggu dibuka.
+    </p>
+    <p>
+      Dalam hati, Vino merasa minggu ini kayak gunung: tinggi, melelahkan, tapi harus dilewatin. Dia menoleh sebentar ke arah Sena. Cewek itu duduk diam dengan cara yang khas—tenang, tapi matanya selalu melewati baris-baris halaman catatan seolah nggak mau ketinggalan satu poin pun.
+    </p>
+    <p>
+      <b>Sena ↓</b>“Hmm… siap?”
+    </p>
+    <p>
+      <b>Vino ↓↓</b>“Ya… semoga aja otakku masih waras.”
+    </p>
+    <p>
+      Sena nyengir tipis, lalu menutup bukunya.
+    </p>
+    <p>
+      Begitu kertas soal dibuka, kelas langsung hening. Suara kipas angin yang nyaris nggak pernah kedengeran sebelumnya tiba-tiba jadi jelas. Vino mulai mengerjakan satu soal, lalu soal berikutnya. Kadang mandek, kadang lancar. Tapi anehnya, dia nggak seseram yang dia bayangkan. Ada rasa “aku bisa” yang muncul sedikit-sedikit.
+    </p>
+  </div>
+  <p>----</p>
+  <div>
+    <kondisi>
+      [Kelas – Dua Hari Setelahnya]
+    </kondisi>
+    <p>
+      Ruang kelas masih sama, tapi rasa capek mulai terasa di mata tiap murid. Meja-meja penuh dengan botol minum, hape mati, dan binder yang isinya penuh coretan semalam. Vino datang agak lebih awal dan duduk diam sambil memijat pelipisnya.
+    </p>
+    <p>
+      Dia teringat bagaimana dia dan Sena belajar singkat kemarin sore. Nggak banyak bicara, tapi efeknya besar banget. Walaupun hanya duduk bareng, suasananya bikin kepala lebih tenang.
+    </p>
+    <p>
+      <b>Vino ↓</b>“Sen, materi hari ini… seberapa susah ya?”
+    </p>
+    <p>
+      <b>Sena ↓</b>“Kalo dilihat-lihat, nggak sehoror yang kita kira. Yang penting kamu jangan panik.”
+    </p>
+    <p>
+      Vino mengangguk, meski dalam hati tetap deg-degan. Tapi kata-kata itu cukup untuk bikin bahunya nggak sekaku tadi.
+    </p>
+    <p>
+      Saat guru masuk dan membagikan lembar soal, suasana kembali tenggelam dalam keheningan. Beberapa menit kemudian, Vino sadar dia bisa mengerjakan jauh lebih banyak daripada yang dia prediksi. Mungkin belajarnya cukup. Mungkin dia beneran berkembang. Atau mungkin… dia cuma lebih tenang karena ada seseorang yang bikin ia percaya diri.
+    </p>
+  </div>
+  <p>----</p>
+  <div>
+    <fieldset>
+      <legend>pesan</legend>
+      <p>
+        Kita sering ngerasa nggak siap, tapi kadang yang kita butuhin cuma ketenangan kecil dari orang yang duduk di sebelah kita.
+      </p>
+    </fieldset>
+  </div>
+  <p>----</p>
+  <div>
+    <kondisi>
+      [Kelas – Hari Keempat]
+    </kondisi>
+    <p>
+      Mata Vino sudah mulai merah. Bukan karena menangis, tapi karena kecapean belajar seminggu nonstop. Dia meletakkan kepala sebentar di meja sambil menunggu lembar soal dibagikan.
+    </p>
+    <p>
+      Sena datang beberapa menit setelahnya dan duduk pelan.
+    </p>
+    <p>
+      <b>Sena ↓</b>“Kamu nggak tidur, ya?”
+    </p>
+    <p>
+      <b>Vino ↓</b>“Tidur… cuma kayak nggak tidur.”
+    </p>
+    <p>
+      Sena tertawa kecil.
+    </p>
+    <p>
+      <b>Sena ↓</b>“Sabar. Hari ini bukan yang paling berat kok.”
+    </p>
+    <p>
+      Kata-kata itu entah kenapa cukup buat Vino duduk lebih tegak. Dia nggak tau kenapa, tapi setiap kali Sena bicara, ada sensasi kayak semua beban sedikit digeser ke samping.
+    </p>
+    <p>
+      Ketika ujian dimulai, Vino fokus. Terkadang dia berhenti sebentar, menutup mata, lalu lanjut lagi. Lima soal pertama sulit, lima berikutnya agak mudah. Dan ketika bel tanda selesai berbunyi, dia merasa masih kuat—walau sedikit goyah.
+    </p>
+  </div>
+  <p>----</p>
+  <div>
+    <kondisi>
+      [Kelas – Hari Terakhir PAS]
+    </kondisi>
+    <p>
+      Udara kelas terasa lebih ringan hari itu, seolah semua orang sudah melihat garis finish di depan mata. Vino membuka lembar soal terakhir dengan perasaan campur aduk. Capek, lega, tapi juga penasaran hasilnya nanti.
+    </p>
+    <p>
+      Dia menulis jawaban terakhir dengan tangan yang agak kaku, lalu duduk bersandar.
+    </p>
+    <p>
+      <b>Vino ↓</b>“…selesai.”
+    </p>
+    <p>
+      <b>Sena ↓</b>“Hhh… akhirnya ya.”
+    </p>
+    <p>
+      Sena memandang keluar jendela, melihat cahaya siang yang terang banget.
+    </p>
+    <p>
+      <b>Sena ↓</b>“Besok pasti berasa kosong, Vin.”
+    </p>
+    <p>
+      <b>Vino ↓</b>“Iya. Tapi itu enak sih.”
+    </p>
+    <p>
+      Mereka tertawa kecil. Setelah guru mengumpulkan lembar jawaban, murid-murid satu per satu keluar kelas. Koridor terasa lebih hangat dari biasanya, penuh suara lega yang sama-sama mereka bagi.
+    </p>
+    <p>
+      Vino berjalan pelan bersama Sena menuju gerbang. Langkah mereka santai, seolah seminggu penuh tekanan akhirnya selesai dan mereka bisa bernapas lebih panjang.
+    </p>
+    <p>
+      Dalam hati, Vino merasa bangga pada dirinya sendiri. Mungkin nilainya nggak sempurna, tapi perjalanan seminggu ini membuktikan banyak hal: dia bisa kalau mau, dia kuat kalau ditahan, dan dia lebih tenang kalau ada yang menemani.
+    </p>
+  </div>
+  <p>----</p>
+  <div>
+    <fieldset>
+      <legend>kesimpulan</legend>
+      <p>
+        Kadang yang bikin kita bertahan bukan karena kita paling pintar, tapi karena kita nggak jalan sendirian.
+      </p>
+    </fieldset>
+  </div>
+</body>
+</html>

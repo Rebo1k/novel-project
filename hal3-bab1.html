@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+     body {  
+      overflow-y: auto;  
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }  
+    * {
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    :root {
+      --border-black: 1px solid black;
+      --border-white: 2px solid white;
+      --border-radius-pt1: 5px;
+      --text-align: center;
+      --font-weight: bold;
+    }
+    header {
+      background-color: #333;
+      text-align: center;
+    }
+    h1 {
+      color: white;
+      transition: background 0.4s ease, background-size 0.4s ease, color 0.4s ease, -webkit-background-clip 0.4s ease;
+    }
+    h1:hover {
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red, orange, yellow);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowMove 5s linear infinite;
+    }
+    h2 {
+      color: white;
+      text-shadow: 0 0 1px black;
+      transition: text-shadow 0.4s ease;
+    }
+    h2:hover {
+      text-shadow: 0 0 5px black;
+    }
+    h6 {
+      width: 40px;
+      background-color: #222;
+      text-align: center;
+      margin: 0 auto;
+      border: 1px solid black;
+      color: white;
+      border-radius: var(--border-radius-pt1);
+      transition: box-shadow 0.4s ease;
+    }
+    h6:hover {
+      box-shadow: 0 0 5px black;
+    }
+    fieldset {
+      background-color: #444;
+      border-radius: var(--border-radius-pt1);
+      border: var(--border-black);
+      transition: all 0.4s ease;
+    }
+    fieldset p,
+    fieldset legend{
+      color: white;
+    }
+    fieldset:hover {
+      box-shadow: 0 0 5px black;
+    }
+    fieldset:hover legend,
+    fieldset:hover p {
+      text-shadow: 0 0 5px black;
+      font-weight: bold;
+      color: white;
+    }
+    legend {
+      font-weight: var(--font-weight);
+      transition: all 0.5s ease;
+    }
+    p {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: all 0.5s ease;
+    }
+    p > b {
+      all: unset;
+      display: inline-block;
+      width: 100%;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red, orange, yellow);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowMove 5s linear infinite;
+    }
+    p:hover {
+      text-shadow: 0 0 5px black;
+      font-weight: bold;
+      color: white;
+    }
+    kondisi {
+      font-weight: bold;
+      transition: all 0.5s ease;
+    }
+    kondisi:hover {
+      color: white;
+      text-shadow: 0 0 5px black;
+    }
+     @keyframes rainbowMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+  </style>
+  <title>hal3-bab1.html</title>
+</head>
+<body>
+  <h6>bab1</h6>
+  <header>
+    <h1>COUSIN LOVE</h1>
+  </header>
+  <h2>hal3: rutinitas yang tak berubah</h2>
+
+  <kondisi>[pagi hari di rumah]</kondisi>
+  <p><b>Vino ↓</b>"Udah pagi lagi aja... rasanya baru tidur deh."</p>
+  <p>Suara jam weker di pojok meja terus berdentang tanpa ampun. Ia menatap langit-langit sebentar, mencoba mencari semangat yang mungkin tertinggal di mimpi semalam.</p>
+  <p><b>Mira ↓</b>"Kalau kamu bangun terus liatin langit-langit, itu namanya bukan bangun, tapi merenung."</p>
+  <p><b>Vino ↓</b>"Aku cuma lagi mikir... hidup tuh kayak weker ya, selalu bangunin tapi gak pernah tau kapan harus berhenti."</p>
+  <p>Mira tertawa kecil, sambil menyiapkan roti di meja makan. Udara pagi di rumah itu tenang, seperti belum ingin diusik.</p>
+
+  <p>----</p>
+
+  <kondisi>[siang hari di taman belakang]</kondisi>
+  <p><b>Mira ↓</b>"Kamu sadar gak sih, kita selalu di tempat yang sama tiap hari?"</p>
+  <p><b>Vino ↓</b>"Kenapa? Bosan ya?"</p>
+  <p><b>Mira ↓</b>"Enggak juga... cuma aneh aja, rasanya kayak waktu berhenti di sini."</p>
+  <p>Vino menatap bunga yang mulai layu. Ia mengerti maksud Mira, tapi memilih diam. Kadang diam adalah cara terbaik untuk menjaga ketenangan yang rapuh.</p>
+
+  <p>----</p>
+
+  <kondisi>[malam hari di kamar]</kondisi>
+  <p><b>Vino ↓</b>"Hari ini gak banyak berubah, ya."</p>
+  <p><b>Mira ↓</b>"Kadang hal yang gak berubah itu malah bikin kita tenang, Vin."</p>
+  <p><b>Vino ↓</b>"Atau mungkin kita cuma takut berubah."</p>
+  <p>Mira tersenyum samar, menatap lampu kecil di meja. Di matanya, keheningan malam itu seperti jawaban yang tak perlu dijelaskan.</p>
+
+  <fieldset>
+    <legend>pesan kondisi</legend>
+    <p>Pagi yang tenang, siang yang diam, malam yang reflektif. Masing-masing punya maknanya sendiri: rutinitas bukan berarti berhenti, tapi cara lain untuk bertahan.</p>
+  </fieldset>
+
+  <fieldset>
+    <legend>pesan</legend>
+    <p>Rutinitas kadang terasa membosankan, tapi di dalamnya tersimpan ketenangan. Mengeluh bukan solusi, memahami adalah penyelesaiannya.</p>
+  </fieldset>
+</body>
+</html>

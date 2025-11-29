@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+     body {  
+      overflow-y: auto;  
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }  
+    * {
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    :root {
+      --border-black: 1px solid black;
+      --border-white: 2px solid white;
+      --border-radius-pt1: 5px;
+      --text-align: center;
+      --font-weight: bold;
+    }
+    header {
+      background-color: #333;
+      text-align: center;
+    }
+    h1 {
+      color: white;
+      transition: background 0.4s ease, background-size 0.4s ease, color 0.4s ease, -webkit-background-clip 0.4s ease;
+    }
+    h1:hover {
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red, orange, yellow);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowMove 5s linear infinite;
+    }
+    h2 {
+      color: white;
+      text-shadow: 0 0 1px black;
+      transition: text-shadow 0.4s ease;
+    }
+    h2:hover {
+      text-shadow: 0 0 5px black;
+    }
+    h6 {
+      width: 40px;
+      background-color: #222;
+      text-align: center;
+      margin: 0 auto;
+      border: 1px solid black;
+      color: white;
+      border-radius: var(--border-radius-pt1);
+      transition: box-shadow 0.4s ease;
+    }
+    h6:hover {
+      box-shadow: 0 0 5px black;
+    }
+    fieldset {
+      background-color: #444;
+      border-radius: var(--border-radius-pt1);
+      border: var(--border-black);
+      transition: all 0.4s ease;
+    }
+    fieldset p,
+    fieldset legend{
+      color: white;
+    }
+    fieldset:hover {
+      box-shadow: 0 0 5px black;
+    }
+    fieldset:hover legend,
+    fieldset:hover p {
+      text-shadow: 0 0 5px black;
+      font-weight: bold;
+      color: white;
+    }
+    legend {
+      font-weight: var(--font-weight);
+      transition: all 0.5s ease;
+    }
+    p {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: all 0.5s ease;
+    }
+    p > b {
+      all: unset;
+      display: inline-block;
+      width: 100%;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red, orange, yellow);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowMove 5s linear infinite;
+    }
+    p:hover {
+      text-shadow: 0 0 5px black;
+      font-weight: bold;
+      color: white;
+    }
+    kondisi {
+      font-weight: bold;
+      transition: all 0.5s ease;
+    }
+    kondisi:hover {
+      color: white;
+      text-shadow: 0 0 5px black;
+    }
+     @keyframes rainbowMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    .chat-novel {
+      width: 300px;
+      height: 450px;
+      border-radius: 12px;
+      background: #e5ddd5;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 10px rgba(0,0,0,.2);
+      margin: 20px auto;
+      font-family: sans-serif;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+    
+    .chat-novel:hover {
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .chat-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #075E54;
+      padding: 10px;
+      color: white;
+      position: relative;
+    }
+
+    .chat-header .pp {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background-image: url('https://files.catbox.moe/qx6llw.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+    .icon-menu {
+      width: 22px;
+      height: 22px;
+      background-image: url('https://files.catbox.moe/bzkk2r.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 10px;
+    }
+
+    .chat-body {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .chat-item {
+      display: flex;
+      flex-direction: column;
+      max-width: 80%;
+    }
+
+    .chat-info {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 3px;
+    }
+
+    .chat-bubble {
+      padding: 8px 12px;
+      border-radius: 12px;
+      word-wrap: break-word;
+      font-size: 14px;
+    }
+
+    .kiri .chat-bubble {
+      background: white;
+      border-top-left-radius: 0;
+    }
+
+    .kanan {
+      align-self: flex-end;
+    }
+
+    .kanan .chat-bubble {
+      background: #dcf8c6;
+      border-top-right-radius: 0;
+    }
+    .pesan-baru-container {
+      display: flex;
+      justify-content: center;
+    }
+    .pesan-baru {
+      width: 50%;
+      border-radius: 10px;
+      text-align: center;
+      background: white;
+      font-size: 14px;
+    }
+  </style>
+  <title>hal6-bab1.html</title>
+</head>
+<body>
+  <h6>bab1</h6>
+  <header>
+    <h1>COUSIN LOVE</h1>
+  </header>
+  <h2>Hal6: pagi setelah malam panjang</h2>
+
+  <div>
+    <kondisi>[pagi hari di teras]</kondisi>
+    <p>
+      Pagi ini rasanya fresh banget. Habis hujan, udaranya dingin tapi enak. Aku duduk sambil pegang teh hangat, ngeliatin tetangga berangkat kerja satu-satu. 
+    </p>
+    <p>
+      Kadang aku mikir, hidup tuh simpel ya... yang heboh tuh pikiran kita aja.
+    </p>
+    <p>
+      <b>Mira ↓</b>"Pagi, Vino."
+    </p>
+    <p>
+      <b>Alvino ↓</b>"Pagi. Tehnya mau? Masih anget."
+    </p>
+    <p>
+      Dia cuma senyum kecil terus duduk sebentar. Kita nggak ngobrol banyak, tapi nggak canggung juga. Sunyi yang wajar.
+    </p>
+  </div>
+
+  <p>----</p>
+
+  <div>
+    <kondisi>[di sekolah]</kondisi>
+    <p>
+      Pelajaran biasa. Catat-catat, kadang bengong. Sesekali aku keinget obrolan kemarin malam… aneh juga bisa ngobrol tenang gitu.
+    </p>
+    <p>
+      Istirahat, aku lihat Sena lagi baca. Ya seperti biasa: fokus, adem, nggak ribut. Kadang iri bisa setenang itu.
+    </p>
+    <p>
+      <b>Alvino ↓</b>"Eh, nanti pulang mampir toko buku lagi nggak?"
+    </p>
+    <p>
+      <b>Mira ↓</b>"Boleh."
+    </p>
+    <p>
+      Aku ngomong santai, tapi dalam hati ya sebenernya butuh temen aja. Jalan sendiri tuh… ya bisa, tapi nggak seasyik ada orang buat komentar receh bareng.
+    </p>
+
+    <fieldset>
+      <legend>pesan</legend>
+      <p>
+        Kadang kita nggak butuh obrolan panjang. Cukup tau ada orang yang jalan bareng, itu udah bikin hari lebih enak.
+      </p>
+    </fieldset>
+  </div>
+
+  <p>----</p>
+
+  <div>
+    <kondisi>[sore pulang]</kondisi>
+    <p>
+      Langit oranye muda. Jalanan basah tapi udah nggak becek. Kami jalan pelan sambil bawa plastik berisi satu buku—iya cuma satu, karena uangku pas-pasan.
+    </p>
+    <p>
+      <b>Mira ↓</b>"Kamu lama milihnya."
+    </p>
+    <p>
+      <b>Alvino ↓</b>"Wajar atuh. Buku tuh kaya milih cemilan—salah dikit nyesel seminggu."
+    </p>
+    <p>
+      Dia ketawa kecil. Aku ikut senyum. Nggak lebay, cuma… enak aja. Pulang bareng bukan perkara siapa sama siapa. Kadang cuma soal: jangan pulang sendirian hari ini.
+    </p>
+
+    <fieldset>
+      <legend>kesimpulan</legend>
+      <p>
+        Nggak semua hari spesial. Tapi hari biasa yang tenang itu justru yang paling dirinduin.
+      </p>
+    </fieldset>
+  </div>
+</body>
+</html>

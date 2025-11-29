@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+     body {  
+      overflow-y: auto;  
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }  
+    * {
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    :root {
+      --border-black: 1px solid black;
+      --border-white: 2px solid white;
+      --border-radius-pt1: 5px;
+      --text-align: center;
+      --font-weight: bold;
+    }
+    header {
+      background-color: #333;
+      text-align: center;
+    }
+    h1 {
+      color: white;
+      transition: background 0.4s ease, background-size 0.4s ease, color 0.4s ease, -webkit-background-clip 0.4s ease;
+    }
+    h1:hover {
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red, orange, yellow);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowMove 5s linear infinite;
+    }
+    h2 {
+      color: white;
+      text-shadow: 0 0 1px black;
+      transition: text-shadow 0.4s ease;
+    }
+    h2:hover {
+      text-shadow: 0 0 5px black;
+    }
+    h6 {
+      width: 40px;
+      background-color: #222;
+      text-align: center;
+      margin: 0 auto;
+      border: 1px solid black;
+      color: white;
+      border-radius: var(--border-radius-pt1);
+      transition: box-shadow 0.4s ease;
+    }
+    h6:hover {
+      box-shadow: 0 0 5px black;
+    }
+    fieldset {
+      background-color: #444;
+      border-radius: var(--border-radius-pt1);
+      border: var(--border-black);
+      transition: all 0.4s ease;
+    }
+    fieldset p,
+    fieldset legend{
+      color: white;
+    }
+    fieldset:hover {
+      box-shadow: 0 0 5px black;
+    }
+    fieldset:hover legend,
+    fieldset:hover p {
+      text-shadow: 0 0 5px black;
+      font-weight: bold;
+      color: white;
+    }
+    legend {
+      font-weight: var(--font-weight);
+      transition: all 0.5s ease;
+    }
+    p {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: all 0.5s ease;
+    }
+    p > b {
+      all: unset;
+      display: inline-block;
+      width: 100%;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red, orange, yellow);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowMove 5s linear infinite;
+    }
+    p:hover {
+      text-shadow: 0 0 5px black;
+      font-weight: bold;
+      color: white;
+    }
+    kondisi {
+      font-weight: bold;
+      transition: all 0.5s ease;
+    }
+    kondisi:hover {
+      color: white;
+      text-shadow: 0 0 5px black;
+    }
+     @keyframes rainbowMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+  </style>
+  <title>hal4-bab1.html</title>
+</head>
+<body>
+  <h6>bab1</h6>
+  <header>
+    <h1>COUSIN LOVE</h1>
+  </header>
+  <h2>hal4: hujan setelah pulang sekolah</h2>
+
+  <div>
+    <kondisi>[sore hari di gerbang sekolah]</kondisi>
+    <p>
+      Langit sore mendung. Angin dingin lewat di sela-sela pagar sekolah. Aku baru aja keluar kelas, masih nenteng tas yang beratnya kayak diisi batu.
+    </p>
+    <p>
+      <b>Vino ↓</b>"Yah... hujan. pas banget udah mau pulang."
+    </p>
+    <p>
+      Aku ngelihat Sena berdiri di bawah atap gerbang, megang payung kecil warna biru muda.
+    </p>
+    <p>
+      <b>Sena ↓</b>"Kamu gak bawa payung lagi ya?"
+    </p>
+    <p>
+      <b>Vino ↓</b>"Hehe, ketahuan. Sepertinya aku butuh penyelamat."
+    </p>
+    <p>
+      <b>Sena ↓</b>"Udah sini, nebeng aja. tapi jangan rebutan payung ya."
+    </p>
+  </div>
+
+  <p>----</p>
+
+  <div>
+    <kondisi>[di jalan menuju rumah]</kondisi>
+    <p>
+      Jalanan licin, air hujan netes dari ujung rambut. Kami jalan pelan sambil sesekali hindarin genangan.
+    </p>
+    <p>
+      <b>Vino ↓</b>"Kamu gak capek ya tiap hari jalan kaki pulang?"
+    </p>
+    <p>
+      <b>Sena ↓</b>"Capek sih, tapi kalo pulangnya bareng kamu jadi gak kerasa."
+    </p>
+    <p>
+      Aku gak nyangka dia ngomong gitu. Spontan aku pura-pura batuk biar gak kelihatan kaku.
+    </p>
+    <p>
+      <b>Vino ↓</b>"Eh, hujannya malah makin deras. Yuk lari!"
+    </p>
+    <fieldset>
+      <legend>pesan</legend>
+      <p>
+        Terkadang, momen sederhana seperti berjalan di bawah payung kecil bisa nyimpen makna yang lebih besar dari sekadar pulang bareng.
+      </p>
+    </fieldset>
+  </div>
+
+  <p>----</p>
+
+  <div>
+    <kondisi>[malam hari di rumah]</kondisi>
+    <p>
+      Aku duduk di dekat jendela, ngeliatin sisa air hujan yang masih netes dari atap.
+    </p>
+    <p>
+      Bayangan tadi waktu pulang bareng Sena terus muncul di kepala. Hujan emang bikin semuanya terasa lebih lambat... dan lebih hangat.
+    </p>
+    <p>
+      <b>Vino ↓</b>"Kayaknya... hari ini bakal aku inget lama."
+    </p>
+    <fieldset>
+      <legend>kesimpulan</legend>
+      <p>
+        Dari hujan sore, aku belajar satu hal: kehangatan gak selalu datang dari matahari, kadang dari seseorang yang mau jalan bareng di bawah payung sempit.
+      </p>
+    </fieldset>
+  </div>
+</body>
+</html>

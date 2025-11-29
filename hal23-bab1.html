@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>hal23-bab1.html</title>
+  <style>
+     body {  
+      overflow-y: auto;  
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }  
+    * {
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    :root {
+      --border-black: 1px solid black;
+      --border-white: 2px solid white;
+      --border-radius-pt1: 5px;
+      --text-align: center;
+      --font-weight: bold;
+    }
+    header {
+      background-color: #333;
+      text-align: center;
+    }
+    h1 {
+      color: white;
+      transition: background 0.4s ease, background-size 0.4s ease, color 0.4s ease, -webkit-background-clip 0.4s ease;
+    }
+    h1:hover {
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red, orange, yellow);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowMove 5s linear infinite;
+    }
+    h2 {
+      color: white;
+      text-shadow: 0 0 1px black;
+      transition: text-shadow 0.4s ease;
+    }
+    h2:hover {
+      text-shadow: 0 0 5px black;
+    }
+    h6 {
+      width: 40px;
+      background-color: #222;
+      text-align: center;
+      margin: 0 auto;
+      border: 1px solid black;
+      color: white;
+      border-radius: var(--border-radius-pt1);
+      transition: box-shadow 0.4s ease;
+    }
+    h6:hover {
+      box-shadow: 0 0 5px black;
+    }
+    fieldset {
+      background-color: #444;
+      border-radius: var(--border-radius-pt1);
+      border: var(--border-black);
+      transition: all 0.4s ease;
+    }
+    fieldset p,
+    fieldset legend{
+      color: white;
+    }
+    fieldset:hover {
+      box-shadow: 0 0 5px black;
+    }
+    fieldset:hover legend,
+    fieldset:hover p {
+      text-shadow: 0 0 5px black;
+      font-weight: bold;
+      color: white;
+    }
+    legend {
+      font-weight: var(--font-weight);
+      transition: all 0.5s ease;
+    }
+    p {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: all 0.5s ease;
+    }
+    p > b {
+      all: unset;
+      display: inline-block;
+      width: 100%;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red, orange, yellow);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowMove 5s linear infinite;
+    }
+    p:hover {
+      text-shadow: 0 0 5px black;
+      font-weight: bold;
+      color: white;
+    }
+    kondisi {
+      font-weight: bold;
+      transition: all 0.5s ease;
+    }
+    kondisi:hover {
+      color: white;
+      text-shadow: 0 0 5px black;
+    }
+     @keyframes rainbowMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    .chat-novel {
+      width: 300px;
+      height: 450px;
+      border-radius: 12px;
+      background: #e5ddd5;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 10px rgba(0,0,0,.2);
+      margin: 20px auto;
+      font-family: sans-serif;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+    
+    .chat-novel:hover {
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .chat-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #075E54;
+      padding: 10px;
+      color: white;
+      position: relative;
+    }
+
+    .chat-header .pp {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background-image: url('https://files.catbox.moe/qx6llw.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+    .icon-menu {
+      width: 22px;
+      height: 22px;
+      background-image: url('https://files.catbox.moe/bzkk2r.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 10px;
+    }
+
+    .chat-body {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .chat-item {
+      display: flex;
+      flex-direction: column;
+      max-width: 80%;
+    }
+
+    .chat-info {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 3px;
+    }
+
+    .chat-bubble {
+      padding: 8px 12px;
+      border-radius: 12px;
+      word-wrap: break-word;
+      font-size: 14px;
+    }
+
+    .kiri .chat-bubble {
+      background: white;
+      border-top-left-radius: 0;
+    }
+
+    .kanan {
+      align-self: flex-end;
+    }
+
+    .kanan .chat-bubble {
+      background: #dcf8c6;
+      border-top-right-radius: 0;
+    }
+    .pesan-baru-container {
+      display: flex;
+      justify-content: center;
+    }
+    .pesan-baru {
+      width: 50%;
+      border-radius: 10px;
+      text-align: center;
+      background: white;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h6>bab1</h6>
+  <header>
+    <h1>COUSIN LOVE</h1>
+  </header>
+  <h2>Hal23: jarak sedekat itu tapi hati makin bingung</h2>
+  <div>
+    <kondisi>
+      [Rumah Vino – Ruang Tengah]
+    </kondisi>
+    <p>
+      Malam datang pelan-pelan, lampu ruang tengah nyala redup, cuma cukup buat bikin suasananya hangat.
+    </p>
+    <p>
+      Aku duduk di lantai sambil ngerjain sisa tugas tadi, sementara suara kipas muter pelan di belakang.
+    </p>
+    <p>
+      Sena duduk nggak jauh dari aku, tapi rasanya jarak itu justru bikin pikiranku makin kebas.
+    </p>
+    <p>
+      Aku nggak tau kenapa… tapi hari ini dia lebih diam dari biasanya.
+    </p>
+    <p>
+      <b>Vino ↓</b>“Kamu lapar nggak? Aku mau bikin mie.”
+    </p>
+    <p>
+      <b>Sena ↓</b>“Hmmm… mau. Tapi aku bantu ya?”
+    </p>
+    <p>
+      <b>Vino ↓</b>“Nggak usah, kamu duduk aja. Kamu keliatan capek dari tadi.”
+    </p>
+    <p>
+      <b>Sena ↓</b>“Kamu juga…”
+    </p>
+    <p>
+      Suaranya barusan pelan banget. Kayak kalimat pendek, tapi nyampe ke aku lebih dalam dari yang dia maksud. 
+    </p>
+    <p>
+      Entah itu perhatian, atau cuma kebiasaan dia yang selalu halus… Tapi tetap aja bikin aku susah fokus.
+    </p>
+  </div>
+  <p>----</p>
+  <div>
+    <fieldset>
+      <legend>pesan</legend>
+      <p>
+        <i>
+          Beberapa perhatian kecil justru terasa kayak sentuhan besar. Kita nggak siap… tapi kita ngerasainnya.
+        </i>
+      </p>
+    </fieldset>
+  </div>
+  <p>----</p>
+  <div>
+    <p>
+      <b>Vino ↓</b>“Kalo gitu kamu duduk yang bener. Jangan merosot gitu, nanti sakit punggung.”
+    </p>
+    <p>
+      <b>Sena ↓</b>“Kamu kayak Papa…”
+    </p>
+    <p>
+      <b>Vino ↓</b>“…hah?”
+    </p>
+    <p>
+      <b>Sena ↓</b>“Hehehe bercanda… maksudku kamu perhatian banget.”
+    </p>
+    <p>
+      Dan di situ, aku ngerasa jantungku berhenti sepersekian detik. 
+    </p>
+    <p>
+      Kata-katanya sederhana, tapi ada rasa aneh yang ngikut di belakangnya. Kayak ada sesuatu yang dia tau… tapi dia simpan. Atau mungkin… aku yang terlalu berharap?
+    </p>
+    <p>
+      <b>Sena ↓</b>“Vino…”
+    </p>
+    <p>
+      <b>Vino ↓</b>“Hmm?”
+    </p>
+    <p>
+      <b>Sena ↓</b>“Nanti kalo kamu udah selesai bikin mie… duduk sini lagi ya.”
+    </p>
+    <p>
+      <b>Vino ↓</b>“…kamu butuh aku?”
+    </p>
+    <p>
+      <b>Sena ↓</b>“Nggak tau… cuma pengen kamu ada.”
+    </p>
+  </div>
+  <p>----</p>
+  <div>
+    <kondisi>
+      [Rumah Vino – Dapur]
+    </kondisi>
+    <p>
+      Vino berdiri pelan menuju dapur, tapi masih sempat menoleh ke arah Sena yang menatap lantai.
+    </p>
+    <p>
+      Kalimatnya barusan pelan, tapi jujur. Dan aku ngerasain ruangan itu jadi lebih hangat dari lampu mana pun.
+    </p>
+    <p>
+      Jarak kami cuma beberapa langkah, tapi perasaannya jauh lebih dekat dari itu. Dan untuk pertama kalinya… aku takut kalau aku nggak bisa pura-pura biasa lagi.
+    </p>
+  </div>
+  <p>----</p>
+  <div>
+    <fieldset>
+      <legend>kesimpulan</legend>
+      <p>
+        <i>
+          Kadang kebersamaan kecil justru jadi titik yang nggak bisa dilupain.
+Bukan karena momennya besar, tapi karena hatinya ikut bergerak pelan.
+Dan kita cuma bisa berharap… semuanya nggak berubah terlalu cepat.
+        </i>
+      </p>
+    </fieldset>
+  </div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <style>
+     body {  
+      overflow-y: auto;  
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }  
+    * {
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    :root {
+      --border-black: 1px solid black;
+      --border-white: 2px solid white;
+      --border-radius-pt1: 5px;
+      --text-align: center;
+      --font-weight: bold;
+    }
+    header {
+      background-color: #333;
+      text-align: center;
+    }
+    h1 {
+      color: white;
+      transition: background 0.4s ease, background-size 0.4s ease, color 0.4s ease, -webkit-background-clip 0.4s ease;
+    }
+    h1:hover {
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red, orange, yellow);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowMove 5s linear infinite;
+    }
+    h2 {
+      color: white;
+      text-shadow: 0 0 1px black;
+      transition: text-shadow 0.4s ease;
+    }
+    h2:hover {
+      text-shadow: 0 0 5px black;
+    }
+    h6 {
+      width: 40px;
+      background-color: #222;
+      text-align: center;
+      margin: 0 auto;
+      border: 1px solid black;
+      color: white;
+      border-radius: var(--border-radius-pt1);
+      transition: box-shadow 0.4s ease;
+    }
+    h6:hover {
+      box-shadow: 0 0 5px black;
+    }
+    fieldset {
+      background-color: #444;
+      border-radius: var(--border-radius-pt1);
+      border: var(--border-black);
+      transition: all 0.4s ease;
+    }
+    fieldset p,
+    fieldset legend{
+      color: white;
+    }
+    fieldset:hover {
+      box-shadow: 0 0 5px black;
+    }
+    fieldset:hover legend,
+    fieldset:hover p {
+      text-shadow: 0 0 5px black;
+      font-weight: bold;
+      color: white;
+    }
+    legend {
+      font-weight: var(--font-weight);
+      transition: all 0.5s ease;
+    }
+    p {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: all 0.5s ease;
+    }
+    p > b {
+      all: unset;
+      display: inline-block;
+      width: 100%;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red, orange, yellow);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbowMove 5s linear infinite;
+    }
+    p:hover {
+      text-shadow: 0 0 5px black;
+      font-weight: bold;
+      color: white;
+    }
+    kondisi {
+      font-weight: bold;
+      transition: all 0.5s ease;
+    }
+    kondisi:hover {
+      color: white;
+      text-shadow: 0 0 5px black;
+    }
+     @keyframes rainbowMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+  </style>
+  <title>hal2-bab1.html</title>
+</head>
+<body>
+  <h6>bab1</h6>
+  <header>
+    <h1>COUSIN LOVE</h1>
+  </header>
+  <h2>hal2: Perkenalan 2</h2>
+
+  <div>
+    <kondisi>[hari sabtu]</kondisi>
+    <p>
+      Akhirnya... hari yang paling aku tunggu pun tiba.
+    </p>
+    <p>
+      Yap, hari Sabtu. Hari di mana kalau dijalani dengan tulus, esoknya pasti Minggu.
+    </p>
+    <p>
+      Tapi... ada satu hal yang aku nggak suka dari hari Sabtu.
+    </p>
+    <p>
+      Sekolah.
+    </p>
+    <p>
+      Kadang aku mikir, “kenapa sih nggak libur aja?” Tapi pada akhirnya aku sadar—kita nggak bisa mengubah hal itu. Namanya juga sekolah swasta.
+    </p>
+  </div>
+
+  <p>----</p>
+
+  <div>
+    <kondisi>[sekolah]</kondisi>
+    <p>
+      Hadeh... kelas ini panas banget. Udah kayak neraka, ditambah lagi aku lupa bawa uang kas.
+    </p>
+    <p>
+      Uang kas dua puluh ribu... rasanya kayak dua juta buatku. Mahal banget.
+    </p>
+    <p>
+      <b>??? ↓</b>"Woi... mana uang kas lu?" (nada lembut)
+    </p>
+    <p>
+      Waduh, dia lagi...
+    </p>
+
+    <fieldset>
+      <legend>perkenalan</legend>
+      <p>
+        Kenalin, dia namanya <b>Mira Sena</b>. Sepupuku sendiri. Umur kami sama—15 tahun. Tapi aku sedikit lebih tua, dan mungkin lebih tinggi dua sentimeter. Entah kenapa, hal sekecil itu aja bisa bikin aku senang.
+      </p>
+    </fieldset>
+  </div>
+
+  <p>----</p>
+
+  <div>
+    <kondisi>[pulang sekolah]</kondisi>
+    <p>
+      Akhirnya pulang juga. Hmm... ke warnet, ah.
+    </p>
+    <p>
+      Waduh! Lupa ambil kembalian uang kas ke Sena tadi. Yaudah deh, batal ke warnet. Pantas aja celana kerasa ringan.
+    </p>
+    <p>
+      Dia masih di sekitar sekolah nggak ya?
+    </p>
+    <p>
+      Nah, itu dia!
+    </p>
+    <p>
+      <b>Vino ↓</b>"Sena! Mana kembalian uang kas tadi?"
+    </p>
+    <p>
+      <b>Sena ↓</b>"Oh iya, hampir lupa. Bentar ya."
+    </p>
+    <p>
+      <b>Teman Sena ↓</b>"Cie cie... Mira udah punya cowok?" (nyinggung)
+    </p>
+    <p>
+      <b>Vino ↓</b>"Eh, kebo! Sini mulut lu gue lakban! Orang gue cuma mau ngambil kembalian uang kas!"
+    </p>
+    <p>
+      <b>Teman Sena ↓</b>"Ouuh... gue kira mau date. Wkwkwkwk." (ngeledek)
+    </p>
+
+    <fieldset>
+      <legend>pesan</legend>
+      <p>
+        Kadang, hal sederhana bisa disalahartikan. Padahal cuma obrolan biasa, tapi dikira sesuatu yang aneh.  
+        <b>FAKTA</b>
+      </p>
+    </fieldset>
+  </div>
+</body>
+</html>
